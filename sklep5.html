@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔒 NajlepszySerwer.GG 🔒</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4f);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+/* Zakładki */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tab {
+    padding: 12px 25px;
+    margin: 0 5px;
+    cursor: pointer;
+    background: #404070;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.tab.active {
+    background: #5865F2;
+}
+
+.tab:hover {
+    background: #5050a0;
+}
+
+/* Produkty */
+.product {
+    background: #2f2f55;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.product h2 {
+    margin-bottom: 15px;
+}
+
+/* Przycisk ogólny */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Kolory przycisków dla kluczy */
+.button.key {
+    background: #5865F2;
+}
+.button.key:hover {
+    background: #404eed;
+}
+
+/* Kolory przycisków dla rang */
+.button.vip { background: #9b59b6; }
+.button.vip:hover { background: #7d3ea5; }
+
+.button.svip { background: #3498db; }
+.button.svip:hover { background: #217dbb; }
+
+.button.gvip { background: #f1c40f; color: #1e1e2f; }
+.button.gvip:hover { background: #d4ac0d; }
+
+/* Responsywność */
+@media (max-width: 500px) {
+    h1 { font-size: 28px; }
+    .product { padding: 15px; }
+    .button { padding: 10px 20px; font-size: 14px; }
+    .tabs { flex-direction: column; }
+    .tab { margin-bottom: 10px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔒 Sklep Serwera 🔒</h1>
+
+    <!-- Zakładki -->
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('keys')">Klucze</div>
+        <div class="tab" onclick="showTab('boxpvp')">BoxPvP</div>
+        <div class="tab" onclick="showTab('pvp')">PvP</div>
+    </div>
+
+    <!-- Treść Klucze -->
+    <div id="keys" class="tab-content">
+        <div class="product">
+            <h2>🔑 𝓚𝓵𝓾𝓬𝔃𝓮 x10</h2>
+            <a class="button key" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+        <div class="product">
+            <h2>🔑 𝓚𝓵𝓾𝓬𝔃𝓮 x20</h2>
+            <a class="button key" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+        <div class="product">
+            <h2>🔑 𝓚𝓵𝓾𝓬𝔃𝓮 dowolna ilość</h2>
+            <a class="button key" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+    </div>
+
+    <!-- Treść BoxPvP -->
+    <div id="boxpvp" class="tab-content" style="display:none;">
+        <div class="product">
+            <h2>🌟 VIP</h2>
+            <a class="button vip" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+        <div class="product">
+            <h2>🌟 SVIP</h2>
+            <a class="button svip" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+        <div class="product">
+            <h2>🌟 GVIP</h2>
+            <a class="button gvip" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+    </div>
+
+    <!-- Treść PvP -->
+    <div id="pvp" class="tab-content" style="display:none;">
+        <div class="product">
+            <h2>🌟 VIP</h2>
+            <a class="button vip" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+        <div class="product">
+            <h2>🌟 SVIP</h2>
+            <a class="button svip" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+        <div class="product">
+            <h2>🌟 GVIP</h2>
+            <a class="button gvip" href="https://discord.gg/VeTDdukM" target="_blank" rel="noopener noreferrer">Kup</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function showTab(tabId) {
+    // Ukryj wszystkie treści
+    document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+    // Pokaż wybraną treść
+    document.getElementById(tabId).style.display = 'block';
+    // Zaktualizuj aktywną zakładkę
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
